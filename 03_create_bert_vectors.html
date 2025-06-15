@@ -7523,7 +7523,7 @@ a.anchor-link {
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">evlex_shared_scripts</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="c1">#from evlex_shared_scripts import *</span>
 </pre></div>
 </div>
 </div>
@@ -7553,15 +7553,15 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2025-04-24 09:18:35.672743: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-04-24 09:18:35.766170: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+<pre>2025-06-14 14:17:20.047940: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-06-14 14:17:20.057958: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745500715.802794 1019611 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745500715.813369 1019611 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-04-24 09:18:35.893728: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+E0000 00:00:1749925040.070138 2097415 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1749925040.073878 2097415 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-06-14 14:17:20.086908: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
 To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-2025-04-24 09:18:41.931099: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
-Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFBertModel: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias']
+2025-06-14 14:17:24.236848: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFBertModel: ['cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.seq_relationship.bias']
 - This IS expected if you are initializing TFBertModel from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
 - This IS NOT expected if you are initializing TFBertModel from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
 All the weights of TFBertModel were initialized from the PyTorch model.
@@ -7640,13 +7640,13 @@ If your task is similar to the task the model of the checkpoint was trained on, 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="s1">'doreco'</span>
 <span class="k">if</span> <span class="n">dataset</span> <span class="o">==</span> <span class="s1">'opus'</span><span class="p">:</span> <span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'el'</span><span class="p">,</span> <span class="s1">'fi'</span><span class="p">,</span> <span class="s1">'tr'</span><span class="p">,</span> <span class="s1">'es'</span><span class="p">]</span> 
-<span class="k">else</span><span class="p">:</span> <span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'doreco_doculects.txt'</span><span class="p">)]</span>
+<span class="k">else</span><span class="p">:</span> <span class="n">languages</span> <span class="o">=</span> <span class="p">[</span><span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'doreco_english_doculects.txt'</span><span class="p">)]</span>
 <span class="n">outdir</span> <span class="o">=</span> <span class="n">dn</span> <span class="o">=</span> <span class="s1">'./generated/</span><span class="si">%s</span><span class="s1">_bert/'</span> <span class="o">%</span> <span class="n">dataset</span>
 
 <span class="n">indices</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="p">[])</span>
@@ -7688,186 +7688,226 @@ If your task is similar to the task the model of the checkpoint was trained on, 
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>./generated/doreco_bitexts/apah1238.spc mm
-0 mm 
- ['[CLS]', 'mm', '[SEP]'] 
- [CLS] mm [SEP]
-	 0 (1, 19243) (1, 19243, 768) 2025-04-24 19:34:42.309092
-./generated/doreco_bitexts/anal1239.spc Anal proverbs
+<pre>./generated/doreco_bitexts/anal1239.spc Anal proverbs
 0 Anal proverbs 
  ['[CLS]', 'Ana', '##l', 'prove', '##rb', '##s', '[SEP]'] 
  [CLS] Anal proverbs [SEP]
-	 0 (1, 22254) (1, 22254, 768) 2025-04-24 19:35:10.119986
+	 0 (1, 22254) (1, 22254, 768) 2025-06-14 14:57:30.737029
+./generated/doreco_bitexts/apah1238.spc mm
+0 mm 
+ ['[CLS]', 'mm', '[SEP]'] 
+ [CLS] mm [SEP]
+	 0 (1, 19243) (1, 19243, 768) 2025-06-14 14:57:57.383523
 ./generated/doreco_bitexts/arap1274.spc Trickster was walking along
 0 Trickster was walking along 
  ['[CLS]', 'Trick', '##ster', 'was', 'walking', 'along', '[SEP]'] 
  [CLS] Trickster was walking along [SEP]
-	 0 (1, 36919) (1, 36919, 768) 2025-04-24 19:35:59.163286
+	 0 (1, 36918) (1, 36918, 768) 2025-06-14 14:58:47.692728
+./generated/doreco_bitexts/bain1259.spc So me Acebo
+0 So me Acebo 
+ ['[CLS]', 'So', 'me', 'Ace', '##bo', '[SEP]'] 
+ [CLS] So me Acebo [SEP]
+	 0 (1, 29924) (1, 29924, 768) 2025-06-14 14:59:27.856122
 ./generated/doreco_bitexts/beja1238.spc A man :
 0 A man : 
  ['[CLS]', 'A', 'man', ':', '[SEP]'] 
  [CLS] A man : [SEP]
-	 0 (1, 41949) (1, 41949, 768) 2025-04-24 19:36:55.449384
+	 0 (1, 41949) (1, 41949, 768) 2025-06-14 15:00:25.203163
 ./generated/doreco_bitexts/cabe1245.spc Long ago they lived under the trees
 0 Long ago they lived under the trees 
  ['[CLS]', 'Long', 'ago', 'they', 'lived', 'under', 'the', 'trees', '[SEP]'] 
  [CLS] Long ago they lived under the trees [SEP]
-	 0 (1, 21929) (1, 21929, 768) 2025-04-24 19:37:23.905864
+	 0 (1, 21929) (1, 21929, 768) 2025-06-14 15:00:55.018689
 ./generated/doreco_bitexts/cash1254.spc He lived like that they lived like that
 0 He lived like that they lived like that 
  ['[CLS]', 'He', 'lived', 'like', 'that', 'they', 'lived', 'like', 'that', '[SEP]'] 
  [CLS] He lived like that they lived like that [SEP]
-	 0 (1, 21646) (1, 21646, 768) 2025-04-24 19:37:51.892900
+	 0 (1, 21645) (1, 21645, 768) 2025-06-14 15:01:24.472727
 ./generated/doreco_bitexts/dolg1241.spc A gardener is collecting pears
 0 A gardener is collecting pears 
  ['[CLS]', 'A', 'garden', '##er', 'is', 'collecting', 'p', '##ear', '##s', '[SEP]'] 
  [CLS] A gardener is collecting pears [SEP]
-	 0 (1, 34559) (1, 34559, 768) 2025-04-24 19:38:36.657710
+	 0 (1, 34559) (1, 34559, 768) 2025-06-14 15:02:11.079613
 ./generated/doreco_bitexts/even1259.spc My father called me to the settlement [ Sovetskaya Rechka ]
 0 My father called me to the settlement [ Sovetskaya Rechka ] 
  ['[CLS]', 'My', 'father', 'called', 'me', 'to', 'the', 'settlement', '[', 'So', '##vet', '##skaya', 'Re', '##ch', '##ka', ']', '[SEP]'] 
  [CLS] My father called me to the settlement [ Sovetskaya Rechka ] [SEP]
-	 0 (1, 23852) (1, 23852, 768) 2025-04-24 19:39:07.337042
+	 0 (1, 23851) (1, 23851, 768) 2025-06-14 15:02:42.532575
 ./generated/doreco_bitexts/goem1240.spc I will begin a story here a little one
 0 I will begin a story here a little one 
  ['[CLS]', 'I', 'will', 'begin', 'a', 'story', 'here', 'a', 'little', 'one', '[SEP]'] 
  [CLS] I will begin a story here a little one [SEP]
-	 0 (1, 39622) (1, 39622, 768) 2025-04-24 19:39:58.843897
+	 0 (1, 39622) (1, 39622, 768) 2025-06-14 15:03:34.733257
 ./generated/doreco_bitexts/goro1270.spc the thing I want to talk about is honey
 0 the thing I want to talk about is honey 
  ['[CLS]', 'the', 'thing', 'I', 'want', 'to', 'talk', 'about', 'is', 'honey', '[SEP]'] 
  [CLS] the thing I want to talk about is honey [SEP]
-	 0 (1, 37428) (1, 37428, 768) 2025-04-24 19:40:47.901618
+	 0 (1, 37428) (1, 37428, 768) 2025-06-14 15:04:24.422758
 ./generated/doreco_bitexts/guri1247.spc Hey
 0 Hey 
  ['[CLS]', 'Hey', '[SEP]'] 
  [CLS] Hey [SEP]
-	 0 (1, 14761) (1, 14761, 768) 2025-04-24 19:41:06.661440
+	 0 (1, 14761) (1, 14761, 768) 2025-06-14 15:04:44.256666
 ./generated/doreco_bitexts/hoch1243.spc Today the men all gathered there they are drinking
 0 Today the men all gathered there they are drinking 
  ['[CLS]', 'Today', 'the', 'men', 'all', 'gathered', 'there', 'they', 'are', 'drinking', '[SEP]'] 
  [CLS] Today the men all gathered there they are drinking [SEP]
-	 0 (1, 13994) (1, 13994, 768) 2025-04-24 19:41:24.561338
+	 0 (1, 13994) (1, 13994, 768) 2025-06-14 15:05:02.884292
 ./generated/doreco_bitexts/jeha1242.spc ready
 0 ready 
  ['[CLS]', 'ready', '[SEP]'] 
  [CLS] ready [SEP]
-	 0 (1, 13606) (1, 13606, 768) 2025-04-24 19:41:41.711066
+	 0 (1, 13606) (1, 13606, 768) 2025-06-14 15:05:20.622224
 ./generated/doreco_bitexts/jeju1234.spc No thanks I ate already
 0 No thanks I ate already 
  ['[CLS]', 'No', 'thanks', 'I', 'ate', 'already', '[SEP]'] 
  [CLS] No thanks I ate already [SEP]
-	 0 (1, 20147) (1, 20147, 768) 2025-04-24 19:42:07.728141
+	 0 (1, 20144) (1, 20144, 768) 2025-06-14 15:05:46.748744
 ./generated/doreco_bitexts/kaka1265.spc Bilale Konde how are you how has been your day
 0 Bilale Konde how are you how has been your day 
  ['[CLS]', 'B', '##ila', '##le', 'Ko', '##nde', 'how', 'are', 'you', 'how', 'has', 'been', 'your', 'day', '[SEP]'] 
  [CLS] Bilale Konde how are you how has been your day [SEP]
-	 0 (1, 56361) (1, 56361, 768) 2025-04-24 19:43:23.016714
+	 0 (1, 56361) (1, 56361, 768) 2025-06-14 15:07:02.342863
 ./generated/doreco_bitexts/kama1351.spc Klavdia Plotnikova third tape
 0 Klavdia Plotnikova third tape 
  ['[CLS]', 'K', '##lav', '##dia', 'P', '##lot', '##nikov', '##a', 'third', 'tape', '[SEP]'] 
  [CLS] Klavdia Plotnikova third tape [SEP]
-	 0 (1, 75846) (1, 75846, 768) 2025-04-24 19:45:08.668117
+	 0 (1, 75845) (1, 75845, 768) 2025-06-14 15:08:46.174703
 ./generated/doreco_bitexts/kark1256.spc I
 0 I 
  ['[CLS]', 'I', '[SEP]'] 
  [CLS] I [SEP]
-	 0 (1, 20552) (1, 20552, 768) 2025-04-24 19:45:36.250349
+	 0 (1, 20552) (1, 20552, 768) 2025-06-14 15:09:13.203386
 ./generated/doreco_bitexts/komn1238.spc My name is
 0 My name is 
  ['[CLS]', 'My', 'name', 'is', '[SEP]'] 
  [CLS] My name is [SEP]
-	 0 (1, 55472) (1, 55472, 768) 2025-04-24 19:46:52.287146
+	 0 (1, 55472) (1, 55472, 768) 2025-06-14 15:10:28.961467
 ./generated/doreco_bitexts/ligh1234.spc a little girl was siting with a dog
 0 a little girl was siting with a dog 
  ['[CLS]', 'a', 'little', 'girl', 'was', 'sit', '##ing', 'with', 'a', 'dog', '[SEP]'] 
  [CLS] a little girl was siting with a dog [SEP]
-	 0 (1, 13664) (1, 13664, 768) 2025-04-24 19:47:10.657651
+	 0 (1, 13664) (1, 13664, 768) 2025-06-14 15:10:47.709741
+./generated/doreco_bitexts/movi1243.spc ' When I was a girl my mother bought golden earrings . '
+0 ' When I was a girl my mother bought golden earrings . ' 
+ ['[CLS]', "'", 'When', 'I', 'was', 'a', 'girl', 'my', 'mother', 'bought', 'golden', 'ear', '##rings', '.', "'", '[SEP]'] 
+ [CLS]'When I was a girl my mother bought golden earrings.'[SEP]
+	 0 (1, 24947) (1, 24947, 768) 2025-06-14 15:11:21.250737
 ./generated/doreco_bitexts/ngal1292.spc This whatsit orange bat
 0 This whatsit orange bat 
  ['[CLS]', 'This', 'what', '##si', '##t', 'orange', 'bat', '[SEP]'] 
  [CLS] This whatsit orange bat [SEP]
-	 0 (1, 11662) (1, 11662, 768) 2025-04-24 19:47:26.042104
+	 0 (1, 11659) (1, 11659, 768) 2025-06-14 15:11:36.776914
 ./generated/doreco_bitexts/nngg1234.spc hyena sits and watches the house
 0 hyena sits and watches the house 
  ['[CLS]', 'h', '##ye', '##na', 'sits', 'and', 'watches', 'the', 'house', '[SEP]'] 
  [CLS] hyena sits and watches the house [SEP]
-	 0 (1, 42576) (1, 42576, 768) 2025-04-24 19:48:24.193561
+	 0 (1, 42561) (1, 42561, 768) 2025-06-14 15:12:34.075304
+./generated/doreco_bitexts/nort2641.spc Once upon a time --- may the mercy of Allah be on the parents of the listeners --- there was a man called Çako
+0 Once upon a time --- may the mercy of Allah be on the parents of the listeners --- there was a man called Çako 
+ ['[CLS]', 'Once', 'upon', 'a', 'time', '-', '-', '-', 'may', 'the', 'mercy', 'of', 'Allah', 'be', 'on', 'the', 'parents', 'of', 'the', 'listeners', '-', '-', '-', 'there', 'was', 'a', 'man', 'called', 'Ç', '##ak', '##o', '[SEP]'] 
+ [CLS] Once upon a time - - - may the mercy of Allah be on the parents of the listeners - - - there was a man called Çako [SEP]
+	 0 (1, 17696) (1, 17696, 768) 2025-06-14 15:12:57.549797
+./generated/doreco_bitexts/nort2875.spc this is something I planted
+0 this is something I planted 
+ ['[CLS]', 'this', 'is', 'something', 'I', 'planted', '[SEP]'] 
+ [CLS] this is something I planted [SEP]
+	 0 (1, 20225) (1, 20225, 768) 2025-06-14 15:13:25.108736
+./generated/doreco_bitexts/orko1234.spc I will tell a story about a group of people who lived
+0 I will tell a story about a group of people who lived 
+ ['[CLS]', 'I', 'will', 'tell', 'a', 'story', 'about', 'a', 'group', 'of', 'people', 'who', 'lived', '[SEP]'] 
+ [CLS] I will tell a story about a group of people who lived [SEP]
+	 0 (1, 26209) (1, 26209, 768) 2025-06-14 15:14:00.552276
 ./generated/doreco_bitexts/pnar1238.spc ` so he said say # tell us your place where you live . '
 0 ` so he said say # tell us your place where you live . ' 
  ['[CLS]', '`', 'so', 'he', 'said', 'say', '#', 'tell', 'us', 'your', 'place', 'where', 'you', 'live', '.', "'", '[SEP]'] 
  [CLS] ` so he said say # tell us your place where you live.'[SEP]
-	 0 (1, 24859) (1, 24859, 768) 2025-04-24 19:48:56.481762
+	 0 (1, 24859) (1, 24859, 768) 2025-06-14 15:14:33.944152
+./generated/doreco_bitexts/port1286.spc And a story about one man and his woman
+0 And a story about one man and his woman 
+ ['[CLS]', 'And', 'a', 'story', 'about', 'one', 'man', 'and', 'his', 'woman', '[SEP]'] 
+ [CLS] And a story about one man and his woman [SEP]
+	 0 (1, 13631) (1, 13631, 768) 2025-06-14 15:14:51.971426
 ./generated/doreco_bitexts/ruul1235.spc My name is Nalumu Aidah Ntakimanyi Lit My names are
 0 My name is Nalumu Aidah Ntakimanyi Lit My names are 
  ['[CLS]', 'My', 'name', 'is', 'Na', '##lum', '##u', 'Aid', '##ah', 'N', '##ta', '##kim', '##any', '##i', 'Li', '##t', 'My', 'names', 'are', '[SEP]'] 
  [CLS] My name is Nalumu Aidah Ntakimanyi Lit My names are [SEP]
-	 0 (1, 25138) (1, 25138, 768) 2025-04-24 19:49:29.815409
+	 0 (1, 25138) (1, 25138, 768) 2025-06-14 15:15:24.720329
 ./generated/doreco_bitexts/sadu1234.spc Well let me now tell you again
 0 Well let me now tell you again 
  ['[CLS]', 'Well', 'let', 'me', 'now', 'tell', 'you', 'again', '[SEP]'] 
  [CLS] Well let me now tell you again [SEP]
-	 0 (1, 13488) (1, 13488, 768) 2025-04-24 19:49:48.643317
+	 0 (1, 13488) (1, 13488, 768) 2025-06-14 15:15:42.615614
 ./generated/doreco_bitexts/sanz1248.spc I was 18 We got married and after the wedding I worked as a milkmaid in Tsaaldarki
 0 I was 18 We got married and after the wedding I worked as a milkmaid in Tsaaldarki 
  ['[CLS]', 'I', 'was', '18', 'We', 'got', 'married', 'and', 'after', 'the', 'wedding', 'I', 'worked', 'as', 'a', 'milk', '##ma', '##id', 'in', 'T', '##sa', '##ald', '##ark', '##i', '[SEP]'] 
  [CLS] I was 18 We got married and after the wedding I worked as a milkmaid in Tsaaldarki [SEP]
-	 0 (1, 8977) (1, 8977, 768) 2025-04-24 19:50:00.633287
+	 0 (1, 8977) (1, 8977, 768) 2025-06-14 15:15:54.518771
 ./generated/doreco_bitexts/savo1255.spc Kapisitu toneo
 0 Kapisitu toneo 
  ['[CLS]', 'Ka', '##pis', '##it', '##u', 'tone', '##o', '[SEP]'] 
  [CLS] Kapisitu toneo [SEP]
-	 0 (1, 10805) (1, 10805, 768) 2025-04-24 19:50:15.631509
+	 0 (1, 10805) (1, 10805, 768) 2025-06-14 15:16:08.554306
 ./generated/doreco_bitexts/sout2856.spc He told that there was this ancestor who had a son he and his wife
 0 He told that there was this ancestor who had a son he and his wife 
  ['[CLS]', 'He', 'told', 'that', 'there', 'was', 'this', 'ancestor', 'who', 'had', 'a', 'son', 'he', 'and', 'his', 'wife', '[SEP]'] 
  [CLS] He told that there was this ancestor who had a son he and his wife [SEP]
-	 0 (1, 30068) (1, 30068, 768) 2025-04-24 19:50:54.370455
+	 0 (1, 30068) (1, 30068, 768) 2025-06-14 15:16:48.663602
 ./generated/doreco_bitexts/sumi1235.spc for us
 0 for us 
  ['[CLS]', 'for', 'us', '[SEP]'] 
  [CLS] for us [SEP]
-	 0 (1, 19480) (1, 19480, 768) 2025-04-24 19:51:19.614193
+	 0 (1, 19478) (1, 19478, 768) 2025-06-14 15:17:14.466965
 ./generated/doreco_bitexts/svan1243.spc _ Once my uncle when we were on the Mekhana mountain then my uncle went off to go hunting in the rocks
 0 _ Once my uncle when we were on the Mekhana mountain then my uncle went off to go hunting in the rocks 
  ['[CLS]', '_', 'Once', 'my', 'uncle', 'when', 'we', 'were', 'on', 'the', 'Me', '##kha', '##na', 'mountain', 'then', 'my', 'uncle', 'went', 'off', 'to', 'go', 'hunting', 'in', 'the', 'rocks', '[SEP]'] 
  [CLS] _ Once my uncle when we were on the Mekhana mountain then my uncle went off to go hunting in the rocks [SEP]
-	 0 (1, 19876) (1, 19876, 768) 2025-04-24 19:51:44.950319
+	 0 (1, 19874) (1, 19874, 768) 2025-06-14 15:17:41.103249
 ./generated/doreco_bitexts/taba1259.spc There were two friends
 0 There were two friends 
  ['[CLS]', 'There', 'were', 'two', 'friends', '[SEP]'] 
  [CLS] There were two friends [SEP]
-	 0 (1, 9054) (1, 9054, 768) 2025-04-24 19:51:56.351312
+	 0 (1, 9054) (1, 9054, 768) 2025-06-14 15:17:52.879097
 ./generated/doreco_bitexts/teop1238.spc Once -
 0 Once - 
  ['[CLS]', 'Once', '-', '[SEP]'] 
  [CLS] Once - [SEP]
-	 0 (1, 16713) (1, 16713, 768) 2025-04-24 19:52:17.529697
+	 0 (1, 16712) (1, 16712, 768) 2025-06-14 15:18:15.338275
 ./generated/doreco_bitexts/texi1237.spc So they say a man has money
 0 So they say a man has money 
  ['[CLS]', 'So', 'they', 'say', 'a', 'man', 'has', 'money', '[SEP]'] 
  [CLS] So they say a man has money [SEP]
-	 0 (1, 22128) (1, 22128, 768) 2025-04-24 19:52:45.859093
+	 0 (1, 22128) (1, 22128, 768) 2025-06-14 15:18:47.889966
+./generated/doreco_bitexts/toto1304.spc Question and answer
+0 Question and answer 
+ ['[CLS]', 'Question', 'and', 'answer', '[SEP]'] 
+ [CLS] Question and answer [SEP]
+	 0 (1, 21978) (1, 21978, 768) 2025-06-14 15:19:19.280471
 ./generated/doreco_bitexts/trin1278.spc Hello ladies and gentlemen
 0 Hello ladies and gentlemen 
  ['[CLS]', 'Hello', 'ladies', 'and', 'gentlemen', '[SEP]'] 
  [CLS] Hello ladies and gentlemen [SEP]
-	 0 (1, 34184) (1, 34184, 768) 2025-04-24 19:53:30.541914
+	 0 (1, 34184) (1, 34184, 768) 2025-06-14 15:20:05.103127
+./generated/doreco_bitexts/tsim1256.spc I am Mayatu
+0 I am Mayatu 
+ ['[CLS]', 'I', 'am', 'Maya', '##tu', '[SEP]'] 
+ [CLS] I am Mayatu [SEP]
+	 0 (1, 17772) (1, 17772, 768) 2025-06-14 15:20:29.099254
 ./generated/doreco_bitexts/urum1249.spc To my mind they came two hundred years ago from Trabzon
 0 To my mind they came two hundred years ago from Trabzon 
  ['[CLS]', 'To', 'my', 'mind', 'they', 'came', 'two', 'hundred', 'years', 'ago', 'from', 'T', '##rab', '##zon', '[SEP]'] 
  [CLS] To my mind they came two hundred years ago from Trabzon [SEP]
-	 0 (1, 29826) (1, 29826, 768) 2025-04-24 19:54:13.082273
+	 0 (1, 29826) (1, 29826, 768) 2025-06-14 15:21:09.369544
 ./generated/doreco_bitexts/vera1241.spc One day there was a married couple
 0 One day there was a married couple 
  ['[CLS]', 'One', 'day', 'there', 'was', 'a', 'married', 'couple', '[SEP]'] 
  [CLS] One day there was a married couple [SEP]
-	 0 (1, 24363) (1, 24363, 768) 2025-04-24 19:54:46.487632
+	 0 (1, 24357) (1, 24357, 768) 2025-06-14 15:21:42.767503
 ./generated/doreco_bitexts/warl1254.spc a man is standing with a rifle by a tree a woman xxx
 0 a man is standing with a rifle by a tree a woman xxx 
  ['[CLS]', 'a', 'man', 'is', 'standing', 'with', 'a', 'rifle', 'by', 'a', 'tree', 'a', 'woman', 'x', '##x', '##x', '[SEP]'] 
  [CLS] a man is standing with a rifle by a tree a woman xxx [SEP]
-	 0 (1, 15063) (1, 15063, 768) 2025-04-24 19:55:06.213483
+	 0 (1, 15062) (1, 15062, 768) 2025-06-14 15:22:02.333058
 </pre>
 </div>
 </div>

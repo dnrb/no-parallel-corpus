@@ -7531,12 +7531,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c7b24b6d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c7b24b6d">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
@@ -7558,27 +7558,8 @@ a.anchor-link {
 <span class="c1"># #</span>
 <span class="n">good_pos</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'NOUN'</span><span class="p">,</span><span class="s1">'ADJ'</span><span class="p">,</span><span class="s1">'VERB'</span><span class="p">}</span>
 <span class="n">excluded_lemmas</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'be'</span><span class="p">,</span> <span class="s1">'other'</span><span class="p">,</span> <span class="s1">'have'</span><span class="p">,</span> <span class="s1">'let'</span><span class="p">,</span> <span class="s1">'one'</span><span class="p">,</span> <span class="s1">'lot'</span><span class="p">,</span> <span class="s1">'same'</span><span class="p">,</span> <span class="s1">'such'</span><span class="p">,</span> <span class="s1">'t'</span><span class="p">,</span> <span class="s1">'s'</span><span class="p">}</span>
-<span class="n">doculects</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_doculects.txt'</span><span class="p">)))</span>
+<span class="n">doculects</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)))</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2025-04-25 01:28:56.117183: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
-2025-04-25 01:28:56.207107: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
-WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1745558936.243584 1728444 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1745558936.254905 1728444 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-2025-04-25 01:28:56.333584: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
-To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
-</pre>
 </div>
 </div>
 </div>
@@ -7599,14 +7580,14 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># files</span>
 <span class="n">dataset</span> <span class="o">=</span> <span class="s1">'doreco'</span>
 <span class="k">if</span> <span class="n">dataset</span> <span class="o">==</span> <span class="s1">'doreco'</span><span class="p">:</span>
     <span class="n">metadata</span> <span class="o">=</span> <span class="s1">'/home/xxxx/Google Drive/data/doreco_v2/doreco_files_metadata.csv'</span>
-    <span class="n">doculects</span> <span class="o">=</span> <span class="p">[</span><span class="n">tl</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">tl</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_doculects.txt'</span><span class="p">)]</span>
+    <span class="n">doculects</span> <span class="o">=</span> <span class="p">[</span><span class="n">tl</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">tl</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)]</span>
     <span class="n">freq_threshold</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">doculects</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'es'</span><span class="p">,</span> <span class="s1">'fi'</span><span class="p">,</span> <span class="s1">'tr'</span><span class="p">]</span>
@@ -7628,7 +7609,7 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">indices</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">bert_indices</span><span class="p">,</span> <span class="s1">'rb'</span><span class="p">))</span>
@@ -7645,7 +7626,7 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>2025-04-25 01:29:02.136987: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
+<pre>2025-06-14 15:25:31.667423: E external/local_xla/xla/stream_executor/cuda/cuda_driver.cc:152] failed call to cuInit: INTERNAL: CUDA error: Failed call to cuInit: UNKNOWN ERROR (303)
 </pre>
 </div>
 </div>
@@ -7656,7 +7637,7 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">string_mergable</span><span class="p">(</span><span class="n">ci</span><span class="p">,</span><span class="n">cj</span><span class="p">):</span>
@@ -7696,7 +7677,7 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_vectors</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
@@ -7771,7 +7752,7 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">regen_vectors</span> <span class="o">=</span> <span class="kc">True</span>
@@ -7791,314 +7772,251 @@ To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other ope
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>apah1238
-0 500  2025-04-25 01:29:10.550096
-0 1000  2025-04-25 01:29:11.533396
-0 1500  2025-04-25 01:29:12.909711
-0 2000  2025-04-25 01:29:14.872701
-0 2500  2025-04-25 01:29:17.368278
-0 3000  2025-04-25 01:29:20.051767
-anal1239
-0 500  2025-04-25 01:29:39.732677
-0 1000  2025-04-25 01:29:40.898012
-0 1500  2025-04-25 01:29:42.537785
-0 2000  2025-04-25 01:29:45.285086
-0 2500  2025-04-25 01:29:50.415787
+<pre>anal1239
+0 500  2025-06-14 15:25:54.788367
+0 1000  2025-06-14 15:25:56.480064
+0 1500  2025-06-14 15:25:59.120519
+0 2000  2025-06-14 15:26:02.300909
+0 2500  2025-06-14 15:26:06.156668
+apah1238
+0 500  2025-06-14 15:26:14.707489
+0 1000  2025-06-14 15:26:15.149046
+0 1500  2025-06-14 15:26:15.735143
+0 2000  2025-06-14 15:26:16.557496
+0 2500  2025-06-14 15:26:17.475350
+0 3000  2025-06-14 15:26:18.524599
 arap1274
-0 500  2025-04-25 01:30:22.957221
-0 1000  2025-04-25 01:30:24.787910
-0 1500  2025-04-25 01:30:26.990766
-0 2000  2025-04-25 01:30:29.608382
-0 2500  2025-04-25 01:30:32.781812
-0 3000  2025-04-25 01:30:39.726566
+0 500  2025-06-14 15:26:43.541184
+0 1000  2025-06-14 15:26:44.948913
+0 1500  2025-06-14 15:26:46.737621
+0 2000  2025-06-14 15:26:48.783254
+0 2500  2025-06-14 15:26:51.297972
+0 3000  2025-06-14 15:26:57.143306
+bain1259
+0 500  2025-06-14 15:27:17.050890
+0 1000  2025-06-14 15:27:18.311925
+0 1500  2025-06-14 15:27:20.077427
+0 2000  2025-06-14 15:27:22.255022
+0 2500  2025-06-14 15:27:24.540185
 beja1238
-0 500  2025-04-25 01:31:05.287660
-0 1000  2025-04-25 01:31:06.341526
-0 1500  2025-04-25 01:31:07.662313
-0 2000  2025-04-25 01:31:09.277843
-0 2500  2025-04-25 01:31:11.204074
-0 3000  2025-04-25 01:31:13.175946
-0 3500  2025-04-25 01:31:15.362318
-0 4000  2025-04-25 01:31:17.736590
-0 4500  2025-04-25 01:31:21.522944
-0 5000  2025-04-25 01:31:27.309632
-0 5500  2025-04-25 01:31:33.359966
-0 6000  2025-04-25 01:31:40.111799
+0 500  2025-06-14 15:27:47.778292
+0 1000  2025-06-14 15:27:48.640087
+0 1500  2025-06-14 15:27:49.778942
+0 2000  2025-06-14 15:27:51.059531
+0 2500  2025-06-14 15:27:52.474541
+0 3000  2025-06-14 15:27:54.101323
+0 3500  2025-06-14 15:27:55.997357
+0 4000  2025-06-14 15:27:58.314136
+0 4500  2025-06-14 15:28:01.494895
+0 5000  2025-06-14 15:28:04.825882
+0 5500  2025-06-14 15:28:09.472636
+0 6000  2025-06-14 15:28:14.340365
 cabe1245
-0 500  2025-04-25 01:31:53.257506
-0 1000  2025-04-25 01:31:54.975068
-0 1500  2025-04-25 01:31:57.327593
-0 2000  2025-04-25 01:32:00.211714
+0 500  2025-06-14 15:28:24.785094
+0 1000  2025-06-14 15:28:26.062504
+0 1500  2025-06-14 15:28:27.901582
+0 2000  2025-06-14 15:28:30.384070
 cash1254
-0 500  2025-04-25 01:32:14.008076
-0 1000  2025-04-25 01:32:16.348394
-0 1500  2025-04-25 01:32:19.004792
+0 500  2025-06-14 15:28:42.424994
+0 1000  2025-06-14 15:28:44.237400
+0 1500  2025-06-14 15:28:46.394354
 dolg1241
-0 500  2025-04-25 01:32:39.684202
-0 1000  2025-04-25 01:32:42.775203
-0 1500  2025-04-25 01:32:47.149424
-0 2000  2025-04-25 01:32:55.899379
+0 500  2025-06-14 15:29:04.970586
+0 1000  2025-06-14 15:29:07.428515
+0 1500  2025-06-14 15:29:10.927972
+0 2000  2025-06-14 15:29:17.662265
 even1259
-0 500  2025-04-25 01:33:17.976741
-0 1000  2025-04-25 01:33:19.555485
-0 1500  2025-04-25 01:33:21.465310
-0 2000  2025-04-25 01:33:23.994257
+0 500  2025-06-14 15:29:36.184536
+0 1000  2025-06-14 15:29:37.336263
+0 1500  2025-06-14 15:29:38.902200
+0 2000  2025-06-14 15:29:41.032169
 goem1240
-0 500  2025-04-25 01:33:33.776757
-0 1000  2025-04-25 01:33:37.064196
-0 1500  2025-04-25 01:33:41.535392
-0 2000  2025-04-25 01:33:50.170052
-0 2500  2025-04-25 01:34:00.701982
+0 500  2025-06-14 15:29:49.622675
+0 1000  2025-06-14 15:29:52.393899
+0 1500  2025-06-14 15:29:56.147850
+0 2000  2025-06-14 15:30:03.094973
+0 2500  2025-06-14 15:30:11.724720
 goro1270
-0 500  2025-04-25 01:34:15.210816
-0 1000  2025-04-25 01:34:16.603898
-0 1500  2025-04-25 01:34:18.467281
-0 2000  2025-04-25 01:34:20.686326
-0 2500  2025-04-25 01:34:23.166126
-0 3000  2025-04-25 01:34:26.030675
-0 3500  2025-04-25 01:34:30.262540
-0 4000  2025-04-25 01:34:34.462865
+0 500  2025-06-14 15:30:23.935115
+0 1000  2025-06-14 15:30:25.036475
+0 1500  2025-06-14 15:30:26.610243
+0 2000  2025-06-14 15:30:28.522074
+0 2500  2025-06-14 15:30:30.593889
+0 3000  2025-06-14 15:30:33.512402
+0 3500  2025-06-14 15:30:38.173944
+0 4000  2025-06-14 15:30:43.073957
 guri1247
-0 500  2025-04-25 01:34:44.530309
-0 1000  2025-04-25 01:34:45.805909
+0 500  2025-06-14 15:30:53.484445
+0 1000  2025-06-14 15:30:54.639459
 hoch1243
-0 500  2025-04-25 01:34:52.433873
+0 500  2025-06-14 15:31:00.321355
 jeha1242
-0 500  2025-04-25 01:34:57.351083
-0 1000  2025-04-25 01:34:58.402183
+0 500  2025-06-14 15:31:04.278374
+0 1000  2025-06-14 15:31:05.103086
 jeju1234
-0 500  2025-04-25 01:35:09.668490
-0 1000  2025-04-25 01:35:10.722024
-0 1500  2025-04-25 01:35:12.388173
+0 500  2025-06-14 15:31:15.038419
+0 1000  2025-06-14 15:31:15.899542
+0 1500  2025-06-14 15:31:17.229668
 kaka1265
-0 500  2025-04-25 01:35:51.631559
-0 1000  2025-04-25 01:35:54.051647
-0 1500  2025-04-25 01:35:57.444794
-0 2000  2025-04-25 01:36:01.509622
-0 2500  2025-04-25 01:36:08.417315
-0 3000  2025-04-25 01:36:16.224905
-0 3500  2025-04-25 01:36:27.937322
-0 4000  2025-04-25 01:36:40.363534
-0 4500  2025-04-25 01:36:53.027532
+0 500  2025-06-14 15:31:51.971221
+0 1000  2025-06-14 15:31:53.960623
+0 1500  2025-06-14 15:31:56.692644
+0 2000  2025-06-14 15:32:00.039299
+0 2500  2025-06-14 15:32:06.993506
+0 3000  2025-06-14 15:32:15.853211
+0 3500  2025-06-14 15:32:25.310489
+0 4000  2025-06-14 15:32:35.232905
+0 4500  2025-06-14 15:32:47.094630
 kama1351
-0 500  2025-04-25 01:37:16.941039
-0 1000  2025-04-25 01:37:19.056918
-0 1500  2025-04-25 01:37:21.416443
-0 2000  2025-04-25 01:37:24.012566
-0 2500  2025-04-25 01:37:27.071212
-0 3000  2025-04-25 01:37:30.209499
-0 3500  2025-04-25 01:37:34.588154
-0 4000  2025-04-25 01:37:41.869927
-0 4500  2025-04-25 01:37:49.654970
-0 5000  2025-04-25 01:37:57.953139
-0 5500  2025-04-25 01:38:06.627945
-0 6000  2025-04-25 01:38:17.111993
-0 6500  2025-04-25 01:38:28.766865
-0 7000  2025-04-25 01:38:41.022264
-0 7500  2025-04-25 01:38:53.568970
-0 8000  2025-04-25 01:39:06.508941
-0 8500  2025-04-25 01:39:21.019216
-0 9000  2025-04-25 01:39:35.486406
+0 500  2025-06-14 15:33:10.379869
+0 1000  2025-06-14 15:33:12.150028
+0 1500  2025-06-14 15:33:14.189797
+0 2000  2025-06-14 15:33:16.426070
+0 2500  2025-06-14 15:33:18.844767
+0 3000  2025-06-14 15:33:21.431069
+0 3500  2025-06-14 15:33:25.136316
+0 4000  2025-06-14 15:33:31.643903
+0 4500  2025-06-14 15:33:38.010868
+0 5000  2025-06-14 15:33:44.891801
+0 5500  2025-06-14 15:33:52.050096
+0 6000  2025-06-14 15:34:00.398898
+0 6500  2025-06-14 15:34:09.762293
+0 7000  2025-06-14 15:34:20.841753
+0 7500  2025-06-14 15:34:32.104710
+0 8000  2025-06-14 15:34:43.717121
+0 8500  2025-06-14 15:34:56.481652
+0 9000  2025-06-14 15:35:08.679072
 kark1256
-0 500  2025-04-25 01:39:49.716273
-0 1000  2025-04-25 01:39:51.678012
-0 1500  2025-04-25 01:39:54.441603
+0 500  2025-06-14 15:35:21.338467
+0 1000  2025-06-14 15:35:22.891318
+0 1500  2025-06-14 15:35:25.244001
 komn1238
-0 500  2025-04-25 01:40:30.294463
-0 1000  2025-04-25 01:40:31.802960
-0 1500  2025-04-25 01:40:33.818170
-0 2000  2025-04-25 01:40:36.067811
-0 2500  2025-04-25 01:40:38.595857
-0 3000  2025-04-25 01:40:42.767503
-0 3500  2025-04-25 01:40:46.559131
-0 4000  2025-04-25 01:40:51.654803
-0 4500  2025-04-25 01:40:57.126319
-0 5000  2025-04-25 01:41:02.854541
-0 5500  2025-04-25 01:41:08.477616
-0 6000  2025-04-25 01:41:14.481688
-0 6500  2025-04-25 01:41:22.006509
-0 7000  2025-04-25 01:41:29.028490
-0 7500  2025-04-25 01:41:37.023280
+0 500  2025-06-14 15:35:55.208359
+0 1000  2025-06-14 15:35:56.449122
+0 1500  2025-06-14 15:35:58.087426
+0 2000  2025-06-14 15:35:59.978013
+0 2500  2025-06-14 15:36:02.073680
+0 3000  2025-06-14 15:36:04.498145
+0 3500  2025-06-14 15:36:07.771475
+0 4000  2025-06-14 15:36:13.011412
+0 4500  2025-06-14 15:36:18.901027
+0 5000  2025-06-14 15:36:25.049669
+0 5500  2025-06-14 15:36:31.302685
+0 6000  2025-06-14 15:36:37.928478
+0 6500  2025-06-14 15:36:44.864396
+0 7000  2025-06-14 15:36:51.920628
+0 7500  2025-06-14 15:36:58.414139
 ligh1234
-0 500  2025-04-25 01:41:40.214907
-0 1000  2025-04-25 01:41:41.663993
+0 500  2025-06-14 15:37:01.006664
+0 1000  2025-06-14 15:37:02.063661
+movi1243
+0 500  2025-06-14 15:37:10.686003
+0 1000  2025-06-14 15:37:11.454511
+0 1500  2025-06-14 15:37:12.415241
+0 2000  2025-06-14 15:37:13.555621
 ngal1292
-0 500  2025-04-25 01:41:46.020307
-0 1000  2025-04-25 01:41:46.534022
-0 1500  2025-04-25 01:41:47.263312
+0 500  2025-06-14 15:37:16.454789
+0 1000  2025-06-14 15:37:16.886461
+0 1500  2025-06-14 15:37:17.477596
 nngg1234
-0 500  2025-04-25 01:41:58.221461
-0 1000  2025-04-25 01:41:59.677105
-0 1500  2025-04-25 01:42:01.509597
-0 2000  2025-04-25 01:42:03.638401
-0 2500  2025-04-25 01:42:06.316651
-0 3000  2025-04-25 01:42:09.044106
-0 3500  2025-04-25 01:42:14.715548
-0 4000  2025-04-25 01:42:21.246484
-0 4500  2025-04-25 01:42:27.796191
-0 5000  2025-04-25 01:42:34.771500
-0 5500  2025-04-25 01:42:41.337077
+0 500  2025-06-14 15:37:27.001128
+0 1000  2025-06-14 15:37:28.144359
+0 1500  2025-06-14 15:37:29.692846
+0 2000  2025-06-14 15:37:31.467187
+0 2500  2025-06-14 15:37:33.555882
+0 3000  2025-06-14 15:37:35.945791
+0 3500  2025-06-14 15:37:40.604684
+0 4000  2025-06-14 15:37:45.681415
+0 4500  2025-06-14 15:37:51.081830
+0 5000  2025-06-14 15:37:56.600869
+0 5500  2025-06-14 15:38:02.182252
+nort2641
+0 500  2025-06-14 15:38:16.089910
+nort2875
+0 500  2025-06-14 15:38:27.233762
+0 1000  2025-06-14 15:38:27.880151
+0 1500  2025-06-14 15:38:28.906207
+0 2000  2025-06-14 15:38:30.092119
+0 2500  2025-06-14 15:38:31.595491
+orko1234
+0 500  2025-06-14 15:38:38.751986
+0 1000  2025-06-14 15:38:39.742167
+0 1500  2025-06-14 15:38:41.014526
+0 2000  2025-06-14 15:38:42.714524
+0 2500  2025-06-14 15:38:44.701086
 pnar1238
-0 500  2025-04-25 01:43:01.841671
+0 500  2025-06-14 15:38:59.440554
+port1286
+0 500  2025-06-14 15:39:06.179460
+0 1000  2025-06-14 15:39:07.546789
 ruul1235
-0 500  2025-04-25 01:43:23.328962
-0 1000  2025-04-25 01:43:24.431862
-0 1500  2025-04-25 01:43:26.037662
-0 2000  2025-04-25 01:43:27.673960
-0 2500  2025-04-25 01:43:29.716071
+0 500  2025-06-14 15:39:22.526025
+0 1000  2025-06-14 15:39:23.377225
+0 1500  2025-06-14 15:39:24.608643
+0 2000  2025-06-14 15:39:25.917481
+0 2500  2025-06-14 15:39:27.510225
 sadu1234
-0 500  2025-04-25 01:43:40.518459
-0 1000  2025-04-25 01:43:41.951797
+0 500  2025-06-14 15:39:36.609349
+0 1000  2025-06-14 15:39:37.673026
 sanz1248
 savo1255
-0 500  2025-04-25 01:43:51.740817
+0 500  2025-06-14 15:39:45.563729
 sout2856
-0 500  2025-04-25 01:44:01.237200
-0 1000  2025-04-25 01:44:05.004308
-0 1500  2025-04-25 01:44:11.770130
+0 500  2025-06-14 15:39:53.922952
+0 1000  2025-06-14 15:39:56.975272
+0 1500  2025-06-14 15:40:02.025361
 sumi1235
-0 500  2025-04-25 01:44:20.598358
-0 1000  2025-04-25 01:44:21.588946
-0 1500  2025-04-25 01:44:22.999650
-0 2000  2025-04-25 01:44:24.642805
+0 500  2025-06-14 15:40:08.760539
+0 1000  2025-06-14 15:40:09.519858
+0 1500  2025-06-14 15:40:10.717413
+0 2000  2025-06-14 15:40:12.089818
 svan1243
-0 500  2025-04-25 01:44:39.276587
-0 1000  2025-04-25 01:44:41.801888
+0 500  2025-06-14 15:40:24.733509
+0 1000  2025-06-14 15:40:26.683332
 taba1259
-0 500  2025-04-25 01:44:47.080059
+0 500  2025-06-14 15:40:31.286880
 teop1238
-0 500  2025-04-25 01:44:51.322773
-0 1000  2025-04-25 01:44:52.314939
-0 1500  2025-04-25 01:44:53.672233
+0 500  2025-06-14 15:40:34.817167
+0 1000  2025-06-14 15:40:35.594691
+0 1500  2025-06-14 15:40:36.713923
 texi1237
-0 500  2025-04-25 01:44:58.974583
-0 1000  2025-04-25 01:44:59.854835
-0 1500  2025-04-25 01:45:01.280763
-0 2000  2025-04-25 01:45:03.075046
-0 2500  2025-04-25 01:45:05.247533
+0 500  2025-06-14 15:40:41.346480
+0 1000  2025-06-14 15:40:42.057161
+0 1500  2025-06-14 15:40:43.213296
+0 2000  2025-06-14 15:40:44.614098
+0 2500  2025-06-14 15:40:46.349124
+toto1304
+0 500  2025-06-14 15:40:54.925315
+0 1000  2025-06-14 15:40:55.508195
+0 1500  2025-06-14 15:40:56.242683
+0 2000  2025-06-14 15:40:57.091990
+0 2500  2025-06-14 15:40:58.024638
+0 3000  2025-06-14 15:40:59.211413
+0 3500  2025-06-14 15:41:01.005847
 trin1278
-0 500  2025-04-25 01:45:30.021614
-0 1000  2025-04-25 01:45:33.071504
-0 1500  2025-04-25 01:45:38.230781
-0 2000  2025-04-25 01:45:51.317031
+0 500  2025-06-14 15:41:21.824787
+0 1000  2025-06-14 15:41:24.315744
+0 1500  2025-06-14 15:41:28.429313
+0 2000  2025-06-14 15:41:38.603950
+tsim1256
+0 500  2025-06-14 15:41:43.960152
+0 1000  2025-06-14 15:41:45.057994
+0 1500  2025-06-14 15:41:46.724986
 urum1249
-0 500  2025-04-25 01:46:03.290853
-0 1000  2025-04-25 01:46:06.113966
-0 1500  2025-04-25 01:46:10.126941
-0 2000  2025-04-25 01:46:18.355793
+0 500  2025-06-14 15:41:57.136776
+0 1000  2025-06-14 15:41:59.314835
+0 1500  2025-06-14 15:42:02.570027
+0 2000  2025-06-14 15:42:09.006958
 vera1241
-0 500  2025-04-25 01:46:32.817961
-0 1000  2025-04-25 01:46:34.976393
-0 1500  2025-04-25 01:46:37.375372
+0 500  2025-06-14 15:42:20.184918
+0 1000  2025-06-14 15:42:21.740307
+0 1500  2025-06-14 15:42:23.705853
 warl1254
-0 500  2025-04-25 01:46:42.768212
-0 1000  2025-04-25 01:46:44.118834
-0 1500  2025-04-25 01:46:45.778952
-0 2000  2025-04-25 01:46:47.651798
+0 500  2025-06-14 15:42:28.352729
+0 1000  2025-06-14 15:42:29.433947
+0 1500  2025-06-14 15:42:30.778032
+0 2000  2025-06-14 15:42:32.268866
 </pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a3b07c4a">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># def C(constraints, E):</span>
-<span class="c1">#     cost = 0</span>
-<span class="c1">#     for S in constraints:</span>
-<span class="c1">#         cost += (1-ncc(set(S.nonzero()[1]), E) if S.nnz &gt; 0 else 0)</span>
-<span class="c1">#     return cost</span>
-
-<span class="c1"># def ncc(S, E):</span>
-<span class="c1">#     cc = 0</span>
-<span class="c1">#     explored = set()</span>
-<span class="c1">#     for v in S:</span>
-<span class="c1">#         if v in explored: continue</span>
-<span class="c1">#         else: cc += 1</span>
-            
-<span class="c1">#         frontier = [v]</span>
-<span class="c1">#         while len(frontier) &gt; 0:</span>
-<span class="c1">#             u = frontier.pop()</span>
-<span class="c1">#             if u in explored: continue</span>
-<span class="c1">#             explored.add(u)</span>
-<span class="c1">#             if u not in E: continue</span>
-<span class="c1">#             frontier.extend(list(S.intersection(E[u])))</span>
-<span class="c1">#     #print('\t',S, E, cc)</span>
-
-<span class="c1">#     return cc</span>
-
-<span class="c1"># def find_edges(constraints):</span>
-<span class="c1">#     # determine possible edges</span>
-<span class="c1">#     x = constraints.T.dot(constraints)</span>
-<span class="c1">#     x2 = (x &gt; 1)</span>
-<span class="c1">#     V2c = Counter()</span>
-<span class="c1">#     for i in range(x2.shape[1]):</span>
-<span class="c1">#         for j in x2[:i,i].nonzero()[0]:</span>
-<span class="c1">#             V2c[i,j] = x[i,j]</span>
-<span class="c1">#     V2 = set(V2c)</span>
-<span class="c1">#     print('n edges', len(V2))</span>
-<span class="c1">#     # initialize edges and weight</span>
-<span class="c1">#     E = { i : set() for i in np.arange(x.shape[0])}</span>
-<span class="c1">#     E_weight = {}</span>
-<span class="c1">#     #</span>
-<span class="c1">#     total_cost = C(constraints, E)</span>
-<span class="c1">#     last_best_decrease = max(V2c.values())</span>
-<span class="c1">#     E_prev = { i : set() for i in np.arange(x.shape[0])}</span>
-<span class="c1">#     last_scores = {}</span>
-<span class="c1">#     while total_cost &lt; 0:</span>
-<span class="c1">#         best_decrease = 0</span>
-<span class="c1">#         best_edge = (None, None)</span>
-<span class="c1">#         for i,(u,v) in enumerate(list(V2)):</span>
-<span class="c1">#             if i % 500 == 0: print('\t', i, len(V2), best_decrease, best_edge)</span>
-<span class="c1">#             E[u].add(v)</span>
-<span class="c1">#             E[v].add(u)</span>
-<span class="c1">#             c = last_scores[u,v] = C(constraints, E)</span>
-<span class="c1">#             E[u].remove(v)</span>
-<span class="c1">#             E[v].remove(u)</span>
-<span class="c1">#             new_decrease = c - total_cost</span>
-<span class="c1">#             #print('\t\ttry', u,v, '\t', c, total_cost, new_decrease)</span>
-<span class="c1">#             if new_decrease &gt; best_decrease:</span>
-<span class="c1">#                 best_decrease = new_decrease</span>
-<span class="c1">#                 best_edge = (u,v)</span>
-<span class="c1">#                 if best_decrease == last_best_decrease:</span>
-<span class="c1">#                     break</span>
-<span class="c1">#             if new_decrease == 0: V2.remove((u,v))</span>
-
-<span class="c1">#         u,v = best_edge</span>
-<span class="c1">#         print('\t',u,v,best_decrease, total_cost+best_decrease)</span>
-<span class="c1">#         E[u].add(v)</span>
-<span class="c1">#         E[v].add(u)</span>
-<span class="c1">#         V2.remove((u,v))</span>
-<span class="c1">#         E_weight[u,v] = E_weight[v,u] = best_decrease</span>
-<span class="c1">#         total_cost += best_decrease</span>
-<span class="c1">#         last_best_decrease = best_decrease</span>
-<span class="c1">#         E_prev = {k : v.copy() for k,v in E.items()}</span>
-<span class="c1">#     return E, E_weight</span>
-
-<span class="c1"># def build_semantic_map(constraints):</span>
-<span class="c1">#     E, E_weight = find_edges(constraints)</span>
-    
-<span class="c1">#     best_edges = []</span>
-<span class="c1">#     for u in E:</span>
-<span class="c1">#         best_edges.extend([tuple(sorted((u,v))) for v in E[u]])</span>
-<span class="c1">#     return (set(range(constraints.shape[0])), set(best_edges), E_weight)</span>
-
-<span class="c1"># def show_graph(V, E, E_weight, pos = None, outfile=None):</span>
-<span class="c1">#     plt.figure(figsize=(20,20))</span>
-<span class="c1">#     label_dict = {i : v for i,v in enumerate(V)}</span>
-<span class="c1">#     gr = nx.Graph()</span>
-<span class="c1">#     gr.add_nodes_from(np.arange(len(V)))</span>
-<span class="c1">#     gr.add_edges_from(E)</span>
-<span class="c1">#     if pos == None:</span>
-<span class="c1">#         pos = nx.spring_layout(gr, k=0.30,iterations=20)</span>
-<span class="c1">#     nx.draw(gr, pos, labels=label_dict, node_size=1500, node_color='w', font_size=15, with_labels=True)</span>
-<span class="c1">#     if outfile is None: plt.show()</span>
-</pre></div>
 </div>
 </div>
 </div>

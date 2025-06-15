@@ -7525,7 +7525,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">dill</span> <span class="k">as</span> <span class="nn">pickle</span>
@@ -7636,7 +7636,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">create_alignments</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">dataset</span><span class="p">,</span> <span class="n">min_freq</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -7673,7 +7673,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">longest_nonoverlapping</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="n">rev</span><span class="p">,</span> <span class="n">frags</span><span class="p">):</span>
@@ -7700,7 +7700,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">extract_tes</span><span class="p">(</span><span class="n">pos_ixx</span><span class="p">,</span> <span class="n">fragments</span><span class="p">,</span> <span class="n">fixx</span><span class="p">,</span> <span class="n">coverage</span> <span class="o">=</span> <span class="mf">0.95</span><span class="p">,</span> <span class="n">min_trans</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">min_backtrans</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
@@ -7776,7 +7776,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="execution">execution<a class="anchor-link" href="#execution">¶</a></h2>
+<h3 id="execution">execution<a class="anchor-link" href="#execution">¶</a></h3>
 </div>
 </div>
 </div>
@@ -7785,12 +7785,11 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># DoReCo</span>
-<span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">create_alignments</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">doc</span> <span class="p">:</span> <span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">),</span> <span class="s1">'doreco'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_doculects.txt'</span><span class="p">)))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">create_alignments</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">doc</span> <span class="p">:</span> <span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">),</span> <span class="s1">'doreco'</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -7803,21 +7802,21 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+<pre>/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
-/tmp/ipykernel_2603394/43898795.py:59: RuntimeWarning: invalid value encountered in divide
+/tmp/ipykernel_1464113/2656191247.py:59: RuntimeWarning: invalid value encountered in divide
   (pos_ct/(pos_ct+neg_ct) &gt;= min_backtrans))[0]
 </pre>
 </div>
@@ -7825,21 +7824,16 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>jeha1242 2025-04-18 17:14:39.731175 514
-apah1238 2025-04-18 17:14:47.498563 670
-goem1240 2025-04-18 17:14:52.368940 989
-guri1247 2025-04-18 17:14:53.240213 724
-cabe1245 2025-04-18 17:14:57.094581 813
-jeju1234 2025-04-18 17:15:17.597729 963
-hoch1243 2025-04-18 17:15:18.821600 655
-anal1239 2025-04-18 17:15:28.313230 1189
+<pre>hoch1243 2025-06-14 13:52:56.153782 655
+jeha1242 2025-06-14 13:53:04.254245 514
+jeju1234 2025-06-14 13:53:05.155374 963
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_2603394/43898795.py:40: RuntimeWarning: divide by zero encountered in log
+<pre>/tmp/ipykernel_1464113/2656191247.py:40: RuntimeWarning: divide by zero encountered in log
   except KeyError: fe_score = fe_scores[table] = -np.log(fisher_exact(table, alternative='greater')[1])
 </pre>
 </div>
@@ -7847,18 +7841,21 @@ anal1239 2025-04-18 17:15:28.313230 1189
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>ligh1234 2025-04-18 17:15:29.614844 459
-cash1254 2025-04-18 17:15:35.882616 976
-arap1274 2025-04-18 17:15:37.842005 1056
-kaka1265 2025-04-18 17:15:41.626992 1804
-goro1270 2025-04-18 17:15:42.465707 1115
+<pre>cash1254 2025-06-14 13:53:06.930712 976
+anal1239 2025-06-14 13:53:08.441910 1189
+goro1270 2025-06-14 13:53:16.247044 1115
+even1259 2025-06-14 13:53:19.961585 1038
+apah1238 2025-06-14 13:53:22.238760 670
+arap1274 2025-06-14 13:53:32.069427 1056
+guri1247 2025-06-14 13:53:36.514740 724
+goem1240 2025-06-14 13:53:38.035993 989
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>/tmp/ipykernel_2603394/43898795.py:40: RuntimeWarning: divide by zero encountered in log
+<pre>/tmp/ipykernel_1464113/2656191247.py:40: RuntimeWarning: divide by zero encountered in log
   except KeyError: fe_score = fe_scores[table] = -np.log(fisher_exact(table, alternative='greater')[1])
 </pre>
 </div>
@@ -7866,35 +7863,70 @@ goro1270 2025-04-18 17:15:42.465707 1115
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>ngal1292 2025-04-18 17:15:43.106620 491
-kark1256 2025-04-18 17:15:53.483402 887
-dolg1241 2025-04-18 17:15:54.064859 1389
-nngg1234 2025-04-18 17:16:00.591341 1054
-sanz1248 2025-04-18 17:16:07.302533 710
-sout2856 2025-04-18 17:16:23.515610 941
-savo1255 2025-04-18 17:16:27.032253 564
-ruul1235 2025-04-18 17:16:46.806399 1297
-pnar1238 2025-04-18 17:16:51.132689 1340
-sumi1235 2025-04-18 17:16:55.871911 735
-sadu1234 2025-04-18 17:17:01.953965 969
-teop1238 2025-04-18 17:17:03.136264 667
-even1259 2025-04-18 17:17:04.313404 1038
-vera1241 2025-04-18 17:17:17.646562 771
-texi1237 2025-04-18 17:17:22.043539 613
-beja1238 2025-04-18 17:17:23.210239 1317
-kama1351 2025-04-18 17:17:27.064510 1421
-svan1243 2025-04-18 17:17:28.166817 1224
-warl1254 2025-04-18 17:17:30.201208 442
-komn1238 2025-04-18 17:17:38.227544 1503
-taba1259 2025-04-18 17:17:38.712080 583
-trin1278 2025-04-18 17:18:01.342957 1420
-urum1249 2025-04-18 17:18:36.065223 976
+<pre>beja1238 2025-06-14 13:53:51.538532 1317
+nngg1234 2025-06-14 13:54:05.580415 1054
+kaka1265 2025-06-14 13:54:05.957231 1804
+movi1243 2025-06-14 13:54:07.018497 1088
+cabe1245 2025-06-14 13:54:13.244728 813
+ngal1292 2025-06-14 13:54:17.488503 491
+dolg1241 2025-06-14 13:54:20.102199 1389
+nort2641 2025-06-14 13:54:25.044741 1105
+bain1259 2025-06-14 13:54:26.143536 1454
+kama1351 2025-06-14 13:54:26.857306 1421
+nort2875 2025-06-14 13:54:27.518135 926
+sanz1248 2025-06-14 13:54:37.551356 710
+pnar1238 2025-06-14 13:54:41.785540 1340
+orko1234 2025-06-14 13:54:43.576503 806
+komn1238 2025-06-14 13:54:44.708051 1503
+savo1255 2025-06-14 13:54:46.889652 564
+port1286 2025-06-14 13:54:49.256550 554
+sout2856 2025-06-14 13:54:50.185939 941
+teop1238 2025-06-14 13:54:52.503506 667
+kark1256 2025-06-14 13:54:52.774417 887
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>/tmp/ipykernel_1464113/2656191247.py:40: RuntimeWarning: divide by zero encountered in log
+  except KeyError: fe_score = fe_scores[table] = -np.log(fisher_exact(table, alternative='greater')[1])
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>ligh1234 2025-06-14 13:54:52.871246 459
+ruul1235 2025-06-14 13:55:02.663705 1297
+vera1241 2025-06-14 13:55:04.163825 771
+texi1237 2025-06-14 13:55:06.298937 613
+tsim1256 2025-06-14 13:55:07.824600 669
+sumi1235 2025-06-14 13:55:08.657437 735
+svan1243 2025-06-14 13:55:09.550826 1224
+sadu1234 2025-06-14 13:55:10.984447 969
+toto1304 2025-06-14 13:55:12.019754 1050
+warl1254 2025-06-14 13:55:12.880729 442
+taba1259 2025-06-14 13:55:17.380680 583
+urum1249 2025-06-14 13:55:35.610131 976
+trin1278 2025-06-14 13:55:50.052480 1420
 </pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5036f426-a05b-4871-918f-ebcdbd3e7c39">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=8500cdbf-c833-4ac9-8abb-c95d1e6960ec">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="AwesomeAlign-model">AwesomeAlign model<a class="anchor-link" href="#AwesomeAlign-model">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=8d0ccbfd-2318-450d-80ca-93213b637eed">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7902,10 +7934,432 @@ urum1249 2025-04-18 17:18:36.065223 976
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># OPUS</span>
-<span class="k">with</span> <span class="n">Pool</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="k">as</span> <span class="n">p</span><span class="p">:</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">starmap</span><span class="p">(</span><span class="n">create_alignments</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">doc</span> <span class="p">:</span> <span class="p">(</span><span class="n">doc</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">),</span> <span class="s1">'opus'</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span> <span class="p">[</span><span class="s1">'es'</span><span class="p">,</span><span class="s1">'fi'</span><span class="p">,</span> <span class="s1">'tr'</span><span class="p">,</span> <span class="s1">'el'</span><span class="p">]))</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># generate to generated/doreco_aa</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=de09d009-89a5-46c2-93dd-ef61b06dfdc7">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 1 create alignments</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./generated/doreco_aa_output'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">'./generated/doreco_aa_output'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">docname</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">docname</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">infile</span> <span class="o">=</span> <span class="s1">'./generated/doreco_bitexts/</span><span class="si">%s</span><span class="s1">.txt'</span> <span class="o">%</span> <span class="n">docname</span>
+    <span class="n">outfile</span> <span class="o">=</span> <span class="s1">'./generated/doreco_aa_output/</span><span class="si">%s</span><span class="s1">.aligns'</span> <span class="o">%</span> <span class="n">docname</span>
+    
+    <span class="n">call</span><span class="p">([</span><span class="s1">'awesome-align'</span><span class="p">,</span> <span class="s1">'--output_file=</span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">outfile</span><span class="p">,</span> <span class="s1">'--model_name_or_path=bert-base-multilingual-cased'</span><span class="p">,</span> <span class="s1">'--data_file=</span><span class="si">%s</span><span class="s1">'</span> <span class="o">%</span> <span class="n">infile</span><span class="p">,</span>
+          <span class="s1">'--extraction'</span><span class="p">,</span> <span class="s1">'softmax'</span><span class="p">,</span> <span class="s1">'--batch_size'</span><span class="p">,</span> <span class="s1">'32'</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=327329fd-6154-4877-9682-24aaccf2a84b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [68]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2 extract right lemmas</span>
+<span class="k">for</span> <span class="n">docname</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)):</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'-'</span><span class="p">)))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_aa_output/</span><span class="si">%s</span><span class="s1">.aligns'</span> <span class="o">%</span> <span class="n">docname</span><span class="p">)]</span>
+    <span class="n">E</span><span class="p">,</span><span class="n">F</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[([(</span><span class="n">w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">2</span><span class="p">],</span> <span class="n">w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">good_pos</span> <span class="ow">and</span> <span class="n">w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">excluded_lemmas</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' ||| '</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> 
+                  <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">],</span>
+                  <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' ||| '</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+                 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_bitexts/</span><span class="si">%s</span><span class="s1">.spc'</span> <span class="o">%</span> <span class="p">(</span><span class="n">docname</span><span class="p">))])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">docname</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">E</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">F</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">hits</span><span class="o">=</span> <span class="p">[]</span>
+    <span class="n">map_counts</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">Counter</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1">#if i &lt; 10: print(i, '|', len(E[i]), len(A[i]), '|', max(a[1] for a in A[i]), max(a[0] for a in A[i]), A[i])</span>
+        <span class="k">for</span> <span class="n">s</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">maps</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">good</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">E</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">good</span><span class="p">:</span> <span class="k">continue</span>
+            <span class="n">hits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,[]))</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,[]):</span>
+                <span class="n">map_counts</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">tes</span><span class="p">,</span> <span class="n">te_words</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="p">[])),</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">Counter</span><span class="p">()))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">s</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="c1">#print(E[i][r], F[i][s])</span>
+            <span class="n">maps</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">good</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">E</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">good</span><span class="p">:</span> <span class="k">continue</span> 
+            <span class="n">s</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,[]),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span> <span class="p">:</span> <span class="n">map_counts</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]],</span> <span class="n">default</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">tes</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">te_words</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+        <span class="c1">#print('='*20)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">hits</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">hits</span><span class="p">))</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_aa_output/</span><span class="si">%s</span><span class="s1">.json'</span> <span class="o">%</span> <span class="p">(</span><span class="n">docname</span><span class="p">),</span><span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+        <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'tes'</span> <span class="p">:</span> <span class="n">tes</span><span class="p">,</span> <span class="s1">'te_words'</span> <span class="p">:</span> <span class="n">te_words</span><span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>anal1239 2855 2855 2855 2025-06-14 13:52:33.498427
+661 0.09971338060039221
+apah1238 3268 3268 3268 2025-06-14 13:52:33.555471
+327 0.077524893314367
+arap1274 3230 3230 3230 2025-06-14 13:52:33.759950
+647 0.07553998832457677
+bain1259 2932 2932 2932 2025-06-14 13:52:33.830597
+644 0.09248886974005457
+beja1238 6330 6330 6330 2025-06-14 13:52:33.911204
+835 0.07755898198030838
+cabe1245 2058 2058 2058 2025-06-14 13:52:33.992223
+808 0.12986178077788493
+cash1254 1766 1766 1766 2025-06-14 13:52:34.148127
+508 0.07718018839258584
+dolg1241 2429 2429 2429 2025-06-14 13:52:34.214448
+1236 0.12395948249924782
+even1259 2311 2311 2311 2025-06-14 13:52:34.288019
+620 0.1000645577792124
+goem1240 2606 2606 2606 2025-06-14 13:52:34.362691
+1219 0.10547719996538894
+goro1270 4333 4333 4333 2025-06-14 13:52:34.448296
+712 0.07926965041193498
+guri1247 1326 1326 1326 2025-06-14 13:52:34.611473
+298 0.0837549184935357
+hoch1243 972 972 972 2025-06-14 13:52:34.643450
+389 0.0968384366442619
+jeha1242 1332 1332 1332 2025-06-14 13:52:34.674593
+330 0.09458297506448839
+jeju1234 1970 1970 1970 2025-06-14 13:52:34.712107
+484 0.10581547879317883
+kaka1265 4610 4610 4610 2025-06-14 13:52:34.801028
+1508 0.10569105691056911
+kama1351 9098 9098 9098 2025-06-14 13:52:35.073360
+2067 0.09756903469435922
+kark1256 1794 1794 1794 2025-06-14 13:52:35.186234
+514 0.08942240779401531
+komn1238 7521 7521 7521 2025-06-14 13:52:35.276496
+1389 0.09784446322907861
+ligh1234 1438 1438 1438 2025-06-14 13:52:35.367713
+266 0.06368206847019392
+movi1243 2194 2194 2194 2025-06-14 13:52:35.520905
+454 0.11638041527813381
+ngal1292 1679 1679 1679 2025-06-14 13:52:35.556258
+158 0.06267354224514082
+nngg1234 5921 5921 5921 2025-06-14 13:52:35.618910
+701 0.05870530106356252
+nort2641 834 834 834 2025-06-14 13:52:35.691760
+451 0.08538432411965165
+nort2875 2694 2694 2694 2025-06-14 13:52:35.736194
+432 0.09379070777247069
+orko1234 2939 2939 2939 2025-06-14 13:52:35.791428
+736 0.10263561567424348
+pnar1238 972 972 972 2025-06-14 13:52:35.953736
+405 0.06551277903591071
+port1286 1220 1220 1220 2025-06-14 13:52:35.992387
+395 0.09007981755986318
+ruul1235 2906 2906 2906 2025-06-14 13:52:36.035405
+471 0.08495670995670995
+sadu1234 1490 1490 1490 2025-06-14 13:52:36.077748
+628 0.1471070508315765
+sanz1248 460 460 460 2025-06-14 13:52:36.108535
+243 0.09371384496721943
+savo1255 780 780 780 2025-06-14 13:52:36.131253
+410 0.12991128010139416
+sout2856 1647 1647 1647 2025-06-14 13:52:36.176444
+764 0.08946135831381732
+sumi1235 2476 2476 2476 2025-06-14 13:52:36.233095
+483 0.09094332517416683
+svan1243 1299 1299 1299 2025-06-14 13:52:36.400598
+432 0.08947804473902236
+taba1259 632 632 632 2025-06-14 13:52:36.435151
+262 0.09205903021784961
+teop1238 1988 1988 1988 2025-06-14 13:52:36.466996
+499 0.10389339995835936
+texi1237 2824 2824 2824 2025-06-14 13:52:36.514222
+422 0.07335303320006953
+toto1304 3676 3676 3676 2025-06-14 13:52:36.564298
+500 0.09386146048432513
+trin1278 2007 2007 2007 2025-06-14 13:52:36.628096
+833 0.0894448620208311
+tsim1256 1591 1591 1591 2025-06-14 13:52:36.794515
+306 0.07617625093353249
+urum1249 2308 2308 2308 2025-06-14 13:52:36.851175
+918 0.10047061398708548
+vera1241 1932 1932 1932 2025-06-14 13:52:36.923641
+744 0.11365719523373052
+warl1254 2011 2011 2011 2025-06-14 13:52:36.973884
+431 0.08578821656050956
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ba0c4f63-7b40-40f5-bec0-72d5debe87eb">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Eflomal">Eflomal<a class="anchor-link" href="#Eflomal">¶</a></h2>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=54e1b317-0dd7-4c7f-9e8f-f419c4fffa44">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [65]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 1 create alignments</span>
+<span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">'./generated/doreco_ef_output'</span><span class="p">):</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="s1">'./generated/doreco_ef_output'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">docname</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">docname</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">infile</span> <span class="o">=</span> <span class="s1">'./generated/doreco_bitexts/</span><span class="si">%s</span><span class="s1">.txt'</span> <span class="o">%</span> <span class="n">docname</span>
+    <span class="n">fwdfile</span> <span class="o">=</span> <span class="s1">'./generated/doreco_ef_output/</span><span class="si">%s</span><span class="s1">.fwd'</span> <span class="o">%</span> <span class="n">docname</span>
+    <span class="n">revfile</span> <span class="o">=</span> <span class="s1">'./generated/doreco_ef_output/</span><span class="si">%s</span><span class="s1">.rev'</span> <span class="o">%</span> <span class="n">docname</span>
+    
+    <span class="n">call</span><span class="p">([</span><span class="s1">'eflomal-align'</span><span class="p">,</span> <span class="s1">'-i'</span><span class="p">,</span> <span class="n">infile</span><span class="p">,</span> <span class="s1">'-f'</span><span class="p">,</span> <span class="n">fwdfile</span><span class="p">,</span> <span class="s1">'-r'</span><span class="p">,</span> <span class="n">revfile</span><span class="p">,</span> <span class="s1">'-m'</span><span class="p">,</span> <span class="s1">'3'</span><span class="p">])</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_ef_output/</span><span class="si">%s</span><span class="s1">.gdfa'</span> <span class="o">%</span> <span class="n">docname</span><span class="p">,</span><span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+        <span class="n">dump</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'dump.txt'</span><span class="p">,</span> <span class="s1">'w'</span><span class="p">)</span>
+        <span class="n">call</span><span class="p">([</span><span class="s1">'./atools'</span><span class="p">,</span> <span class="s1">'-i'</span><span class="p">,</span> <span class="n">fwdfile</span><span class="p">,</span> <span class="s1">'-j'</span><span class="p">,</span> <span class="n">revfile</span><span class="p">,</span> <span class="s1">'-c'</span><span class="p">,</span> <span class="s1">'grow-diag-final-and'</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">fout</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">dump</span><span class="p">)</span>
+        <span class="n">dump</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">'dump.txt'</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>anal1239 2025-06-14 13:18:02.827023
+apah1238 2025-06-14 13:18:03.402415
+arap1274 2025-06-14 13:18:03.832117
+bain1259 2025-06-14 13:18:04.498916
+beja1238 2025-06-14 13:18:05.132296
+cabe1245 2025-06-14 13:18:05.683570
+cash1254 2025-06-14 13:18:06.458669
+dolg1241 2025-06-14 13:18:07.139121
+even1259 2025-06-14 13:18:08.182965
+goem1240 2025-06-14 13:18:08.818280
+goro1270 2025-06-14 13:18:10.077142
+guri1247 2025-06-14 13:18:10.805136
+hoch1243 2025-06-14 13:18:11.378240
+jeha1242 2025-06-14 13:18:12.145142
+jeju1234 2025-06-14 13:18:12.669839
+kaka1265 2025-06-14 13:18:13.360523
+kama1351 2025-06-14 13:18:14.821348
+kark1256 2025-06-14 13:18:15.633825
+komn1238 2025-06-14 13:18:16.308339
+ligh1234 2025-06-14 13:18:17.054584
+movi1243 2025-06-14 13:18:17.582431
+ngal1292 2025-06-14 13:18:18.132541
+nngg1234 2025-06-14 13:18:18.496929
+nort2641 2025-06-14 13:18:19.162596
+nort2875 2025-06-14 13:18:20.193225
+orko1234 2025-06-14 13:18:20.681578
+pnar1238 2025-06-14 13:18:21.373883
+port1286 2025-06-14 13:18:23.200646
+ruul1235 2025-06-14 13:18:23.863177
+sadu1234 2025-06-14 13:18:24.419447
+sanz1248 2025-06-14 13:18:24.991874
+savo1255 2025-06-14 13:18:25.825937
+sout2856 2025-06-14 13:18:26.575922
+sumi1235 2025-06-14 13:18:27.917034
+svan1243 2025-06-14 13:18:28.520916
+taba1259 2025-06-14 13:18:29.463087
+teop1238 2025-06-14 13:18:30.122204
+texi1237 2025-06-14 13:18:30.640991
+toto1304 2025-06-14 13:18:31.129811
+trin1278 2025-06-14 13:18:31.623450
+tsim1256 2025-06-14 13:18:32.873214
+urum1249 2025-06-14 13:18:33.506940
+vera1241 2025-06-14 13:18:34.579412
+warl1254 2025-06-14 13:18:35.457703
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ef960b00-bc8c-4caf-a881-650dbdd4cd6c">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [66]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># 2 extract right lemmas</span>
+<span class="k">for</span> <span class="n">docname</span> <span class="ow">in</span> <span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">strip</span><span class="p">(),</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./doreco_english_doculects.txt'</span><span class="p">)):</span>
+    <span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="nb">tuple</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'-'</span><span class="p">)))</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_ef_output/</span><span class="si">%s</span><span class="s1">.gdfa'</span> <span class="o">%</span> <span class="n">docname</span><span class="p">)]</span>
+    <span class="n">E</span><span class="p">,</span><span class="n">F</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="p">[([(</span><span class="n">w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">2</span><span class="p">],</span> <span class="n">w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="ow">in</span> <span class="n">good_pos</span> <span class="ow">and</span> <span class="n">w</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">excluded_lemmas</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' ||| '</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> 
+                  <span class="k">if</span> <span class="n">w</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s1">'/'</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">],</span>
+                  <span class="n">l</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">'</span><span class="se">\n</span><span class="s1">'</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">' ||| '</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+                 <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_bitexts/</span><span class="si">%s</span><span class="s1">.spc'</span> <span class="o">%</span> <span class="p">(</span><span class="n">docname</span><span class="p">))])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">docname</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">E</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">F</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
+    <span class="n">hits</span><span class="o">=</span> <span class="p">[]</span>
+    <span class="n">map_counts</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">Counter</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="c1">#if i &lt; 10: print(i, '|', len(E[i]), len(A[i]), '|', max(a[1] for a in A[i]), max(a[0] for a in A[i]), A[i])</span>
+        <span class="k">for</span> <span class="n">s</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="n">maps</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">good</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">E</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">good</span><span class="p">:</span> <span class="k">continue</span>
+            <span class="n">hits</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,[]))</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span>
+            <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,[]):</span>
+                <span class="n">map_counts</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="n">tes</span><span class="p">,</span> <span class="n">te_words</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="p">[])),</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span> <span class="p">:</span> <span class="n">Counter</span><span class="p">()))</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)):</span>
+        <span class="n">maps</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">s</span><span class="p">,</span><span class="n">r</span> <span class="ow">in</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+            <span class="c1">#print(E[i][r], F[i][s])</span>
+            <span class="n">maps</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="p">[])</span> <span class="o">+</span> <span class="p">[</span><span class="n">s</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span><span class="p">,(</span><span class="n">r</span><span class="p">,</span><span class="n">good</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">E</span><span class="p">[</span><span class="n">i</span><span class="p">]):</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">good</span><span class="p">:</span> <span class="k">continue</span> 
+            <span class="n">s</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">maps</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">j</span><span class="p">,[]),</span> <span class="n">key</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span> <span class="p">:</span> <span class="n">map_counts</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]],</span> <span class="n">default</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">s</span> <span class="o">!=</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">tes</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">te_words</span><span class="p">[</span><span class="n">r</span><span class="p">][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]][</span><span class="n">F</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">s</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+        <span class="c1">#print('='*20)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">hits</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">hits</span><span class="p">))</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'./generated/doreco_ef_output/</span><span class="si">%s</span><span class="s1">.json'</span> <span class="o">%</span> <span class="p">(</span><span class="n">docname</span><span class="p">),</span><span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">fout</span><span class="p">:</span>
+        <span class="n">fout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span><span class="s1">'tes'</span> <span class="p">:</span> <span class="n">tes</span><span class="p">,</span> <span class="s1">'te_words'</span> <span class="p">:</span> <span class="n">te_words</span><span class="p">}))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>anal1239 2855 2855 2855 2025-06-14 13:19:15.072404
+564 0.08508070598883694
+apah1238 3268 3268 3268 2025-06-14 13:19:15.127649
+204 0.04836415362731152
+arap1274 3230 3230 3230 2025-06-14 13:19:15.189377
+105 0.012259194395796848
+bain1259 2932 2932 2932 2025-06-14 13:19:15.259729
+269 0.038632773229929626
+beja1238 6330 6330 6330 2025-06-14 13:19:15.445002
+281 0.02610068734906186
+cabe1245 2058 2058 2058 2025-06-14 13:19:15.527914
+472 0.07585985213757634
+cash1254 1766 1766 1766 2025-06-14 13:19:15.586204
+330 0.05013673655423884
+dolg1241 2429 2429 2429 2025-06-14 13:19:15.654454
+538 0.05395647377394444
+even1259 2311 2311 2311 2025-06-14 13:19:15.840584
+279 0.045029051000645574
+goem1240 2606 2606 2606 2025-06-14 13:19:15.914285
+189 0.01635372501514234
+goro1270 4333 4333 4333 2025-06-14 13:19:16.002254
+305 0.03395680249387664
+guri1247 1326 1326 1326 2025-06-14 13:19:16.063398
+157 0.044125913434513775
+hoch1243 972 972 972 2025-06-14 13:19:16.097351
+232 0.05775454319143639
+jeha1242 1332 1332 1332 2025-06-14 13:19:16.130779
+187 0.05359701920321009
+jeju1234 1970 1970 1970 2025-06-14 13:19:16.167100
+260 0.05684302579798863
+kaka1265 4610 4610 4610 2025-06-14 13:19:16.365833
+758 0.05312587608634707
+kama1351 9098 9098 9098 2025-06-14 13:19:16.508695
+522 0.02464007552513571
+kark1256 1794 1794 1794 2025-06-14 13:19:16.734911
+296 0.05149617258176757
+komn1238 7521 7521 7521 2025-06-14 13:19:16.816813
+422 0.02972668357283742
+ligh1234 1438 1438 1438 2025-06-14 13:19:16.895483
+84 0.020110126885324396
+movi1243 2194 2194 2194 2025-06-14 13:19:16.932572
+102 0.026147141758523455
+ngal1292 1679 1679 1679 2025-06-14 13:19:16.962583
+31 0.012296707655692185
+nngg1234 5921 5921 5921 2025-06-14 13:19:17.127131
+218 0.0182564274348882
+nort2641 834 834 834 2025-06-14 13:19:17.197839
+204 0.03862173419159409
+nort2875 2694 2694 2694 2025-06-14 13:19:17.240673
+165 0.035822839774207554
+orko1234 2939 2939 2939 2025-06-14 13:19:17.294294
+312 0.04350857620973365
+pnar1238 972 972 972 2025-06-14 13:19:17.355208
+257 0.041572306696861856
+port1286 1220 1220 1220 2025-06-14 13:19:17.400993
+169 0.03854047890535918
+ruul1235 2906 2906 2906 2025-06-14 13:19:17.549663
+187 0.03373015873015873
+sadu1234 1490 1490 1490 2025-06-14 13:19:17.590745
+290 0.06793159990630124
+sanz1248 460 460 460 2025-06-14 13:19:17.619663
+233 0.08985730813729272
+savo1255 780 780 780 2025-06-14 13:19:17.641328
+228 0.07224334600760456
+sout2856 1647 1647 1647 2025-06-14 13:19:17.684529
+400 0.0468384074941452
+sumi1235 2476 2476 2476 2025-06-14 13:19:17.740585
+313 0.058934287328186785
+svan1243 1299 1299 1299 2025-06-14 13:19:17.783339
+251 0.0519884009942005
+taba1259 632 632 632 2025-06-14 13:19:17.936816
+166 0.05832747716092762
+teop1238 1988 1988 1988 2025-06-14 13:19:17.969758
+175 0.03643556110764106
+texi1237 2824 2824 2824 2025-06-14 13:19:18.023226
+105 0.018251347123240048
+toto1304 3676 3676 3676 2025-06-14 13:19:18.074611
+202 0.03792003003566736
+trin1278 2007 2007 2007 2025-06-14 13:19:18.139890
+284 0.030495006979491035
+tsim1256 1591 1591 1591 2025-06-14 13:19:18.203955
+167 0.041573313417973615
+urum1249 2308 2308 2308 2025-06-14 13:19:18.359590
+601 0.06577651307869103
+vera1241 1932 1932 1932 2025-06-14 13:19:18.425860
+351 0.053620531622364805
+warl1254 2011 2011 2011 2025-06-14 13:19:18.468390
+99 0.019705414012738853
+</pre>
 </div>
 </div>
 </div>
